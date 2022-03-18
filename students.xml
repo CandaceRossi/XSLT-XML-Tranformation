@@ -1,39 +1,20 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type = "text/xsl" href="student.xsl"?>
-
-<hs:class>
-    <hs:student>
-        <hs:firstname>John</hs:firstname>
-        <hs:lastname>Lenon</hs:lastname>
-        <hs:studentID>00</hs:studentID>
-    </hs:student>
-     <hs:student>
-        <hs:firstname>Bob</hs:firstname>
-        <hs:lastname>Marley</hs:lastname>
-        <hs:hs:studentID>01</hs:hs:studentID>
-    </hs:student>
-    <hs:student>
-        <hs:firstname>The Artist Formerly Known As</hs:firstname>
-        <hs:lastname>Prince</hs:lastname>
-        <hs:hs:studentID>02</hs:hs:studentID>
-    </hs:student>
-</hs:class>
-
-<c:class>
-    <c:student>
-        <c:firstname>George</c:firstname>
-        <c:lastname>Clinton</c:lastname>
-        <c:studentID>00</c:studentID>
-    </c:student>
-     <c:student>
-        <c:firstname>James</c:firstname>
-        <c:lastname>Brown</c:lastname>
-        <c:c:studentID>01</c:c:studentID>
-    </c:student>
-    <c:student>
-        <c:firstname>Madonna</c:firstname>
-        <c:lastname></c:lastname>
-        <c:studentID>02</c:studentID>
-    </c:student>
-</c:class>
+<xml-stylesheet type="text/xsl" href="student.xsl">
+   <class>
+      <student>
+         <firstname>John</firstname>
+         <lastname>Lenon</lastname>
+         <studentID>00</studentID>
+      </student>
+      <student>
+         <firstname>Bob</firstname>
+         <lastname>Marley</lastname>
+         <studentID>01</studentID>
+      </student>
+      <student>
+         <firstname>The Artist Formerly Known As</firstname>
+         <lastname>Prince</lastname>
+         <studentID>02</studentID>
+      </student>
+   </class>
+</xml-stylesheet>
