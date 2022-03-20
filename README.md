@@ -16,6 +16,6 @@ Implementing XSLT (transformation) from XML document/data to html.
 ![xslt](https://user-images.githubusercontent.com/50240571/159174348-a482ef2c-5c2d-4a05-9758-09e5f6598dd7.JPG)
 
 ## Tools
--Editor: VS Code
--Package Manager: NPM
--XSLT Editor & Extension: XSLT3
+- Editor: VS Code
+- Package Manager: NPM
+- XSLT Editor & Extension: XSLT3
