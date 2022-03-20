@@ -1,56 +1,48 @@
-<root xmlns:hs = "http://www.w3.ord/1999/XSL/Transform"
-xmlns:c = "http://www.w3.ord/1999/XSL/Transform">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                expand-text="yes"
+                version="3.0">
 
-<xsl:stylesheet version= "1.0">
+   <xsl:output method="html" indent="yes"/>
+   <xsl:mode on-no-match="shallow-copy"/>
 
-
-
-    <html>
-        <body>
+   <xsl:template match="/*" mode="#all">
+      <html>
+         <body>
             <h2>Student List</h2>
+            <xsl:apply-templates select="*"/>
+            <table border="1" style="width:100%;">
+               <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Student ID</th>
+               </tr>
+            <xsl:for-each select = "student">
+               <tr>
+                  <td>
+                     {firstname}
+                  </td>
+                  <td>
+                     {lastname}
+                  </td>
+                  <td>
+                     {studentID}
+                  </td>
+               </tr>
+            </xsl:for-each>
+            </table>
+         </body>
+      </html>
+      <!-- <xsl:copy>
+         <xsl:apply-templates select="@*, node()" mode="#current"/>
+      </xsl:copy> -->
+   </xsl:template>
 
-            <hs:table border = "1">
-                <hs:tr>
-                    <hs:th>First Name</hs:th>
-                    <hs:th>Last Name</hs:th>
-                    <hs:th>Student ID</hs:th>
-                </hs:tr>
+   <xsl:template match="student" mode="#default">
+      <p style="color: red">First Name: {firstname}</p>
+      <p style="color: blue">Last Name: {lastname}</p>
+      <p style="color: green">Student ID:{studentID}</p>
+   </xsl:template>
 
-                <xsl:for-each select = "student">
-                    <hs:tr> 
-                        <hs:td> <xsl:value-of select = "firstname" />
-                        </hs:td>
-                         <hs:td> <xsl:value-of select = "lastname" />
-                        </hs:td>
-                        <hs:td> <xsl:value-of select = "studentID" />
-                        </hs:td>
-                    </hs:tr>
-                </xsl:for-each>
-            </hs:table>
-
-
-
-              <c:table border = "1">
-                <c:tr>
-                    <c:th>First Name</c:th>
-                    <c:th>Last Name</c:th>
-                    <c:th>Student ID</c:th>
-                </c:tr>
-
-                <xsl:for-each select = "student">
-                    <c:tr> 
-                        <c:td> <xsl:value-of select = "firstname" />
-                        </c:td>
-                         <c:td> <xsl:value-of select = "lastname" />
-                        </c:td>
-                        <c:td> <xsl:value-of select = "studentID" />
-                        </c:td>
-                    </c:tr>
-                </xsl:for-each>
-            </c:table>
-        </body>
-    </html>
-</xsl:template>
 </xsl:stylesheet>
-
-</root>

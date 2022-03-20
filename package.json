@@ -1,0 +1,23 @@
+{
+  "name": "xslt-xsl-tranformation",
+  "version": "1.0.0",
+  "description": "XSL Files for XSLT XSL Transformation on  XML Schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandaceRossi/XSLT-XSL-Tranformation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CandaceRossi/XSLT-XSL-Tranformation/issues"
+  },
+  "homepage": "https://github.com/CandaceRossi/XSLT-XSL-Tranformation#readme",
+  "devDependencies": {
+    "xslt3": "^2.3.0"
+  }
+}
