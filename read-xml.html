@@ -24,13 +24,14 @@
                             let xml = parser.parseFromString(data, "application/xml")
                             document.getELementById('output').textContent = data;
                             console.log(xml);
-                            buildStudentList(xml);
+                            buildHSStudentList(xml);
+                            buildCStudnetList(xml);
                     });
                 })
 
-                function buildStudentList(x) {
-                    let list = document.getElementById('class');
-                    let house = x.getElementsByTagName('student');
+                function buildHSStudentList(x) {
+                    let list = document.getElementById('hs:class');
+                    let class = x.getElementsByTagName('hs:student');
                     for (let i=0; i<class.length; i++){
                         let li = document.createElement('li');
                         let student = class[i].firstChild.nodeValue
@@ -41,13 +42,13 @@
                     }
 
                 function buildCStudents(x) {
-                let list = document.getElementById('class');
-                    let house = x.getElementsByTagName('cstudent');
+                let list = document.getElementById('c:class');
+                    let class = x.getElementsByTagName('c:student');
                     for (let i=0; i<class.length; i++){
                         let li = document.createElement('li');
                         let student = class[i].firstChild.nodeValue;
-                        let gradeAverage = cstudent[i].getAttribute('gpa');
-                        li.textContent = `${cstudent} - ${gradeAverage}`;
+                        {{/* let gradeAverage = student[i].getAttribute('gpa'); */}}
+                        li.textContent = `${student} - ${gradeAverage}`;
                         li.textContent = cstudent;
                         list.appendChild(li);
                         }

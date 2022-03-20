@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xml-stylesheet type="text/xsl" href="student.xsl">
-   <class>
-      <student>
-         <firstname>John</firstname>
-         <lastname>Lenon</lastname>
-         <studentID>00</studentID>
-      </student>
-      <student>
-         <firstname>Bob</firstname>
-         <lastname>Marley</lastname>
-         <studentID>01</studentID>
-      </student>
-      <student>
-         <firstname>The Artist Formerly Known As</firstname>
-         <lastname>Prince</lastname>
-         <studentID>02</studentID>
-      </student>
-   </class>
-</xml-stylesheet>
+<?xml-stylesheet type="text/html" href="/student.xsl" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="student.xsd">
+   <student>
+      <firstname>John</firstname>
+      <lastname>Lenon</lastname>
+      <studentID>00</studentID>
+   </student>
+   <student>
+      <firstname>Bob</firstname>
+      <lastname>Marley</lastname>
+      <studentID>01</studentID>
+   </student>
+   <student>
+      <firstname>The Artist Formerly Known As</firstname>
+      <lastname>Prince</lastname>
+      <studentID>02</studentID>
+   </student>
+</class>

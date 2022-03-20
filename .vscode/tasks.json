@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "xslt-js",
+			"label": "Students Per Class",
+			"xsltFile": "${workspaceFolder}/student.xsl",
+			"xmlSource": "${workspaceFolder}/students.xml",
+			"resultPath": "${workspaceFolder}/xslt-out/result1.html",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		}
+	]
+}
